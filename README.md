@@ -8,13 +8,13 @@
 
 Kurdish Language Processing Toolkit--KLPT is a [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing) (NLP) toolkit in Python for the [Kurdish language](https://en.wikipedia.org/wiki/Kurdish_languages). The current version comes with four core modules, namely `preprocess`, `stem`, `transliterate` and `tokenize` and addresses basic language processing tasks such as text preprocessing, stemming, tokenization, spell-checking and morphological analysis for the [Sorani](https://en.wikipedia.org/wiki/Sorani) and the [Kurmanji](https://en.wikipedia.org/wiki/Kurmanji) dialects of Kurdish.
 
-## Install
+## 🧑‍💻 Install
 
 ```bash
 pip install klpt
 ```
 
-## Usage
+## 🚀 Usage
 
 Available modules:
 1. Preprocess
@@ -22,7 +22,7 @@ Available modules:
 3. Transliteration
 4. Stem
 
-#### Preprocess
+#### 🛠️ Preprocess
 
 Normalizes scripts and orthographies by using writing conventions based on dialects and scripts.
 
@@ -40,7 +40,7 @@ preprocessor_ckb.preprocess("راستە لە ووڵاتەی ٢٣هەمدا")
 'ڕاستە لە وڵاتەی 23هەمدا'
 ```
 
-#### Tokenize
+#### ✂️ Tokenize
 
 Tokenization of Kurmanji and Sorani dialects of Kurdish.
 
@@ -54,7 +54,7 @@ tokenizer.mwe_tokenize("bi serokê hukûmeta herêma Kurdistanê Prof. Salih re 
 'bi serokê hukûmeta herêma Kurdistanê Prof . Salih re saz kir .'
 ```
 
-#### Transliteration
+#### 🔄 Transliteration
 
 Transliterates from one script of Kurdish into another.
 
@@ -68,7 +68,7 @@ transliterate.transliterate("rojhilata navîn")
 'رۆژهلاتا ناڤین'
 ```
 
-#### Stem
+#### 🌱 Stem
 
 Handles the following tasks:
 1. spelling (error detection & correction)
@@ -80,7 +80,7 @@ Handles the following tasks:
 > It is recommended that this module be used on tokens from the `tokenize` module.  
 > Only Sorani is supported in this module.
 
-Spelling
+📝 Spelling
 
 ```python
 from klpt.stem import Stem
@@ -92,7 +92,7 @@ stemmer.correct_spelling("سوتاندبووت")
 (False, ['ستاندبووت', 'سووتاندبووت', 'سووڕاندبووت', 'ڕووتاندبووت', 'فەوتاندبووت', 'بووژاندبووت'])
 ```
 
-Analyze
+🔍 Analyze
 
 ```python
 from klpt.stem import Stem
@@ -102,7 +102,7 @@ stemmer.analyze("دیتبامن")
 [{'pos': ['verb'], 'description': 'past_stem_transitive_active', 'stem': 'دی', 'lemma': ['دیتن'], 'base': 'دیت', 'prefixes': '', 'suffixes': 'بامن'}]
 ```
 
-Stem
+🌿 Stem
 
 ```python
 from klpt.stem import Stem
@@ -114,7 +114,7 @@ stemmer.stem("گورەکە", mark_unknown=True) # گوڵەکە in Hewlêrî dial
 ['_گور_']
 ```
 
-Lemmatize
+📚 Lemmatize
 
 ```python
 from klpt.stem import Stem
