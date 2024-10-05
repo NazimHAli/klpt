@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75", "wheel>=0.44", "build >= 1.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "klpt"
+version = "0.1.7.rc0"
+description = "Kurdish Language Processing Toolkit"
+readme = "README.md"
+license = {text = "CC BY-SA 4.0"}
+keywords = ["kurdish", "nlp", "natural language processing", "toolkit"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Linguistic",
+]
+requires-python = ">=3.8, <3.13"
+dependencies = [
+    "chunspell==2.0.4"
+]
+
+[tool.setuptools]
+packages = ["klpt"]
