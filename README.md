@@ -16,11 +16,15 @@ pip install klpt
 
 ## Usage
 
-Examples using a combination of scripts with target and source languages.
+Available modules:
+1. Preprocess
+2. Tokenize
+3. Transliteration
+4. Stem
 
 #### Preprocess
 
-[Usage reference](https://sinaahmadi.github.io/klpt/user-guide/preprocess/)
+Normalizes scripts and orthographies by using writing conventions based on dialects and scripts.
 
 ```python
 from klpt.preprocess import Preprocess
@@ -38,7 +42,7 @@ preprocessor_ckb.preprocess("راستە لە ووڵاتەی ٢٣هەمدا")
 
 #### Tokenize
 
-[Usage reference](https://sinaahmadi.github.io/klpt/user-guide/tokenize/)
+Tokenization of Kurmanji and Sorani dialects of Kurdish.
 
 ```python
 from klpt.tokenize import Tokenize
@@ -52,7 +56,10 @@ tokenizer.mwe_tokenize("bi serokê hukûmeta herêma Kurdistanê Prof. Salih re 
 
 #### Transliteration
 
-[Usage reference](https://sinaahmadi.github.io/klpt/user-guide/transliterate/)
+Transliterates from one script of Kurdish into another.
+
+> [!NOTE]
+> Only the Latin-based and the Arabic-based scripts of Sorani and Kurmanji are supported.
 
 ```python
 from klpt.transliterate import Transliterate
@@ -63,7 +70,15 @@ transliterate.transliterate("rojhilata navîn")
 
 #### Stem
 
-[Usage reference](https://sinaahmadi.github.io/klpt/user-guide/stem/)
+Handles the following tasks:
+1. spelling (error detection & correction)
+2. morphological analysis
+3. stemming
+4. lemmatization
+
+> [!NOTE]
+> It is recommended that this module be used on tokens from the `tokenize` module.  
+> Only Sorani is supported in this module.
 
 Spelling
 
@@ -108,6 +123,10 @@ stemmer = Stem("Sorani", "Arabic")
 stemmer.lemmatize("گوڵەکانم")
 ['گوڵ', 'گوڵە']
 ```
+
+## 📜 Documentation
+
+View [documentation](https://sinaahmadi.github.io/klpt/user-guide/).
 
 ## Become a sponsor 
 
